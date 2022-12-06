@@ -45,7 +45,7 @@ function startQuiz() {
 }
 
 function questionClick() {
-    // check if user guessed wrong
+    // checks users answer
     if (this.value !== questions[currentQuestionIndex].answer) {
       // penalize time
       time -= 15;
@@ -77,7 +77,7 @@ function questionClick() {
   }
 }
 function quizEnd() {
-    // stop timer
+    // stoping the timer
     clearInterval(timerId);
   
     var endScreenEl = document.getElementById("end-screen");
@@ -125,7 +125,7 @@ function clockTick() {
       
       submitBtn.onclick = saveHighscore;
 
-// start quiz
+// starts the quiz
 startBtn.onclick = startQuiz;
 
 initialsEl.onkeyup = checkForEnter;
